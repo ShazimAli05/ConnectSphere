@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      (function() {
+        try {
+          var savedScheme = localStorage.getItem("theme") || "dark";
+          var meta = document.querySelector('meta[name="color-scheme"]');
+          if (savedScheme === "light") {
+            document.documentElement.classList.remove("dark");
+            if (meta) meta.content = "light";
+          } else {
+            document.documentElement.classList.add("dark");
+            if (meta) meta.content = "dark";
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2.05 21.95a1 1 0 0 0 1.25 1.25l4.87-1.33A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z'/></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ConnectSphere | Enterprise Real-Time Communication Platform</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#090d16] dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

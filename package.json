@@ -1,0 +1,25 @@
+{
+  "name": "connectsphere",
+  "version": "1.0.0",
+  "description": "ConnectSphere - Enterprise Real-Time Communication Platform (MERN + Socket.IO)",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client dev",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build"
+  },
+  "keywords": [
+    "react",
+    "socket.io",
+    "express",
+    "mongodb",
+    "mern",
+    "chat-application",
+    "real-time"
+  ],
+  "author": "ConnectSphere Engineering Team",
+  "license": "MIT"
+}
